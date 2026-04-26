@@ -1,0 +1,620 @@
+@import url('https://fonts.cdnfonts.com/css/century-gothic');
+
+/*READ ME, this whole code was written by ME, 
+and its not an AI generated page
+Have a nice day*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #111;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15%;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.nav li img {
+  width: 90px;
+  padding-top: 8px;
+}
+
+.nav_text {
+  color: rgb(63, 63, 63);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav_text:hover {
+  color: black;
+}
+
+.cart {
+  border: none;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  background-color: rgb(46, 46, 46);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.cart:hover {
+  background-color: black;
+}
+
+.banner-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: -80px;
+}
+
+.banner {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 1px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.banner-button {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(90px);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.banner-button:hover {
+  background-color: rgba(160, 160, 160, 0.6);
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 10%;
+  gap: 80px;
+}
+
+section img {
+  width: 40%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.right-text, .left-text {
+  max-width: 600px;
+}
+
+.left-section {
+  background-color: #161616;
+  flex-direction: row-reverse;
+}
+
+.right-text h2, .left-text h2 {
+  font-size: 2.8em;
+  font-weight: 400;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.right-text h2 { color: #111; }
+.left-text h2 { color: #fff; }
+
+.right-text p {
+  font-size: 1.2em;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.left-text p {
+  font-size: 1.2em;
+  line-height: 1.7;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+
+.use_button, .left_button {
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.use_button {
+  background-color: rgb(46, 46, 46);
+  color: white;
+}
+
+.use_button:hover {
+  background-color: black;
+}
+
+.left_button {
+  background-color: rgb(237, 237, 237);
+  color: black;
+}
+
+.left_button:hover {
+  background-color: rgb(164, 164, 164);
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+  gap: 15px;
+  height: 85vh;
+}
+
+.card {
+  width: 25%;
+  border-radius: 20px;
+  filter: grayscale(100%);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+}
+
+.card:hover {
+  width: 30%;
+  filter: grayscale(0%);
+}
+
+.cards-heading {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 400;
+  margin: 40px auto;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+.bottom-banner {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  margin-top: 60px;
+  overflow: hidden;
+}
+
+.bottom-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.bottom-banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 30px 50px;
+  border-radius: 15px;
+}
+
+.bottom-banner-content h2 {
+  font-size: 3em;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+.bottom-banner-content p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  color: #f1f1f1;
+}
+
+.bottom-banner button {
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.bottom-banner button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+footer {
+  background-color: #fff;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 0.9em;
+  color: #555;
+  border-top: 1px solid #ddd;
+  letter-spacing: 0.5px;
+}
+
+.imc_ban {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.082);
+  padding: 50px;
+  border-radius: 80px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  filter: grayscale(100%);
+  gap: 0;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+}
+
+.imc_ban:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+
+.imc{
+  width: 80%;
+  border-radius: 40px;
+}
+@media (max-width: 900px) {
+  section {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+    padding: 80px 5%;
+  }
+
+  section img {
+    width: 80%;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .cards {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .bottom-banner-content h2 {
+    font-size: 2em;
+  }
+
+  .bottom-banner-content p {
+    font-size: 1em;
+  }
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.submit-btn {
+  background-color: #111;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #333;
+}
+
+.flash-messages {
+  width: 80%;
+  margin: 0 auto 20px;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+/* Product Grid Styling */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 10%;
+}
+
+.product-card {
+  width: 300px;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.product-price {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.add-to-cart-btn {
+  background-color: #fff;
+  color: #111;
+  border: 1px solid #111;
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.buy-now-btn {
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.buy-now-btn:hover {
+  background-color: #333;
+}
+
+/* Cart Page Styling */
+.cart-items {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+.cart-item-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cart-item-details {
+  flex: 1;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.remove-btn {
+  color: #d9534f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cart-total {
+  width: 80%;
+  margin: 30px auto;
+  text-align: right;
+  font-size: 1.5em;
+}
+
+/* Toast Notification */
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 25px;
+  padding: 16px;
+  position: fixed;
+  z-index: 3000;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  font-size: 17px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}

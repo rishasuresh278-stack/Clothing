@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TÉLOR | Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main_style.css') }}">
+</head>
+<body>
+  <header>
+    <ul class="nav">
+      <li><img src="{{ url_for('static', filename='sources/logom.png') }}" alt="TÉLOR Logo" /></li>
+      <li><a class="nav_text" href="{{ url_for('men') }}">Men</a></li>
+      <li><a class="nav_text" href="{{ url_for('women') }}">Women</a></li>
+      <li><a class="nav_text" href="{{ url_for('access') }}">Accessories</a></li>
+      <li><a href="{{ url_for('cart') }}"><button class="cart">Cart</button></a></li>
+    </ul>
+  </header>
+
+  <div class="banner-container">
+    <img class="banner" src="{{ url_for('static', filename='sources/banner.jpg') }}" alt="Main Banner" />
+  </div>
+
+  <section class="offer-section">
+    <img src="{{ url_for('static', filename='sources/h1.jpg') }}" alt="Holiday Collection" />
+    <div class="offer-text">
+      <h2 style="font-size: 45px;">Holiday Season, Redefined</h2>
+      <p style="font-size: 20px;">
+        Unwrap a world of effortless style, timeless pieces, refined textures,
+        and silhouettes crafted to elevate your season. Discover the elegance of
+        minimalism before it’s gone. Celebrate the art of subtle sophistication this season. 
+        From hand-finished details to timeless silhouettes, each piece is designed to complement 
+        your story with quiet confidence. Because true luxury isn’t loud, it’s lasting.
+      </p>
+    </div>
+  </section>
+
+  <section class="accessories-section" style="background-color: rgb(232, 232, 232);">
+    <div class="accessories-text">
+    <h2 style="font-size: 45px;">Accessories by TÉLOR</h2>
+      <p style="font-size: 20px;">
+        Subtle sophistication meets everyday luxury. Explore our collection of
+        finely crafted accessories perfumes, essentials, and accents that
+        define your style statement. Each piece is designed with purpose merging 
+        timeless aesthetics with modern craftsmanship. From the texture of fine leather 
+        to the lingering notes of our signature scents, every detail reflects quiet confidence
+         and lasting impression.
+      </p>
+    </div>  
+    <img src="{{ url_for('static', filename='sources/accessories.png') }}" alt="Accessories" />
+    
+  </section>
+
+  <div class="bottom-banner">
+    <img src="{{ url_for('static', filename='sources/men_banner.jpg') }}" alt="Coming Soon" />
+    <div class="bottom-banner-content">
+      <h2>Coming Soon</h2>
+      <p>
+        Something timeless is on its way. Stay tuned for our next evolution in
+        elegance.
+      </p>
+      <a href="{{ url_for('men') }}"><button>Explore</button></a>
+    </div>
+  </div>
+
+  <!-- Buy Now Modal -->
+  <div id="buyModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Complete Your Purchase</h2>
+      <form action="{{ url_for('buy') }}" method="POST">
+        <input type="hidden" id="product_name" name="product_name" value="">
+        <input type="hidden" id="product_price" name="product_price" value="">
+        <p id="modal_price_display" style="font-size: 1.2em; font-weight: bold; margin-bottom: 15px;"></p>
+        <div class="form-group">
+          <label for="customer_name">Name:</label>
+          <input type="text" id="customer_name" name="customer_name" required>
+        </div>
+        <div class="form-group">
+          <label for="customer_email">Email:</label>
+          <input type="email" id="customer_email" name="customer_email" required>
+        </div>
+        <div class="form-group">
+          <label for="customer_address">Shipping Address:</label>
+          <textarea id="customer_address" name="customer_address" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Place Order</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="flash-messages">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+    </div>
+    © 2025 TÉLOR. All Rights Reserved.
+  </footer>
+
+  <script>
+    function openModal(productName, productPrice) {
+      document.getElementById('product_name').value = productName;
+      document.getElementById('product_price').value = productPrice;
+      document.getElementById('modal_price_display').innerText = "Price: ₹" + productPrice;
+      document.getElementById('buyModal').style.display = 'block';
+    }
+    function closeModal() {
+      document.getElementById('buyModal').style.display = 'none';
+    }
+    window.onclick = function(event) {
+      if (event.target == document.getElementById('buyModal')) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+</html>
